@@ -44,6 +44,7 @@ import ConstructionBookkeeping from "./pages/services/ConstructionBookkeeping";
 import RestaurantsBookkeeping from "./pages/services/RestaurantsBookkeeping";
 import NetsuiteFAQ from "./pages/compare/netsuitefaq";
 import Contact from "./pages/Contact";
+import HowItWorks from "./components/HowItWorks";
 
 const queryClient = new QueryClient();
 
@@ -99,9 +100,10 @@ const App = () => (
           <Route path="/services/franchise-bookkeeping" element={<FranchiseBookkeeping />} />
           <Route path="/services/construction-bookkeeping" element={<ConstructionBookkeeping />} />
           <Route path="/services/restaurants-bookkeeping" element={<RestaurantsBookkeeping />} />
-          
+          <Route path="/how-it-works" element={<HowItWorks />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
+
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

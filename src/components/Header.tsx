@@ -1,4 +1,42 @@
 import { useState } from "react";
+
+// Collapsible mobile menu for Services/Compare
+// Collapsible mobile menu for Services/Compare
+function MobileCollapseMenu({ label, categories, type, onLinkClick }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div>
+      <button
+        className="w-full flex items-center justify-between font-bold text-white py-2 px-2 rounded hover:bg-primary/10 focus:outline-none focus:ring"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-controls={`mobile-collapse-${label}`}
+      >
+        <span>{label}</span>
+        <span className="ml-2">{open ? "▲" : "▼"}</span>
+      </button>
+      {open && (
+        <div id={`mobile-collapse-${label}`} className="pl-3 pt-2 space-y-3">
+          {categories.map((cat) => (
+            <div key={cat.title}>
+              <div className="text-xs text-muted-foreground font-medium uppercase">{cat.title}</div>
+              {(type === "services" ? cat.services : cat.links).map((item) => (
+                <Link
+                  key={item.slug}
+                  to={item.href}
+                  className="block text-sm py-1 pl-2 text-muted-foreground hover:text-primary"
+                  onClick={onLinkClick}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 import { Button } from "@/components/ui/button";
 import ConsultForm from "@/components/ConsultForm";
 import { Menu, X, Phone, Sparkles } from "lucide-react";
@@ -45,7 +83,7 @@ const Header = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-foreground hover:text-primary font-medium bg-transparent">
+                  <NavigationMenuTrigger className="text-foreground hover:text-primary font-bold bg-transparent">
                     Services
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -75,7 +113,7 @@ const Header = () => {
             </NavigationMenu>
 
             {menuItems.map((item) => (
-              <a key={item.name} href={item.href} className="text-foreground hover:text-primary font-medium">
+              <a key={item.name} href={item.href} className="text-foreground hover:text-primary font-bold">
                 {item.name}
               </a>
             ))}
@@ -83,7 +121,7 @@ const Header = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-foreground hover:text-primary font-medium bg-transparent">
+                  <NavigationMenuTrigger className="text-foreground hover:text-primary font-bold bg-transparent">
                     Compare
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -115,9 +153,9 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center space-x-6">
-            <div className="flex items-center space-x-3 text-muted-foreground">
-              <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">+91 9666736088</span>
+            <div className="flex items-center space-x-3 mb-3">
+              <Phone className="w-5 h-5 text-black" />
+              <span className="text-base font-medium" style={{ color: "#1e40af" }}>+91 9666736088</span>
             </div>
             
           </div>
@@ -129,57 +167,56 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
+
         {isMenuOpen && (
-          <div className="lg:hidden mobile-menu mt-2">
-            <nav className="flex flex-col space-y-4 p-4 bg-surface/40 rounded-lg">
-              <div>
-                <span className="text-foreground font-semibold">Services</span>
-                <div className="mt-2 pl-3 space-y-3">
-                  {serviceCategories.map((cat) => (
-                    <div key={cat.title}>
-                      <div className="text-xs text-muted-foreground font-medium uppercase">{cat.title}</div>
-                      {cat.services.map((svc) => (
-                        <Link key={svc.slug} to={svc.href} className="block text-sm py-1 pl-2 text-muted-foreground" onClick={() => setIsMenuOpen(false)}>
-                          {svc.name}
-                        </Link>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              </div>
+          <>
+            {/* Overlay to close menu on outside click */}
+            <div
+              className="fixed inset-0 z-[99] bg-black/30 lg:hidden"
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Close mobile menu overlay"
+            />
+            <div
+              className="fixed inset-x-0 top-[4.5rem] z-[100] lg:hidden mobile-menu mt-2 pointer-events-auto"
+              onClick={e => e.stopPropagation()}
+            >
+              {/* Close button */}
+              <button
+                className="absolute top-2 right-4 text-white text-3xl font-bold z-[101] focus:outline-none"
+                onClick={() => setIsMenuOpen(false)}
+                aria-label="Close menu"
+                style={{ background: 'none', border: 'none' }}
+              >
+                &times;
+              </button>
+              <nav className="flex flex-col space-y-4 p-4 pt-12 bg-neutral-900/95 shadow-xl rounded-lg text-white relative">
+                {/* Collapsible Services */}
+                <MobileCollapseMenu
+                  label="Services"
+                  categories={serviceCategories}
+                  type="services"
+                  onLinkClick={() => setIsMenuOpen(false)}
+                />
+                {/* Collapsible Compare */}
+                <MobileCollapseMenu
+                  label="Compare"
+                  categories={compareCategories}
+                  type="compare"
+                  onLinkClick={() => setIsMenuOpen(false)}
+                />
 
-              <div>
-                <span className="text-foreground font-semibold">Compare</span>
-                <div className="mt-2 pl-3 space-y-3">
-                  {compareCategories.map((cat) => (
-                    <div key={cat.title}>
-                      <div className="text-xs text-muted-foreground font-medium uppercase">{cat.title}</div>
-                      {cat.links.map((l) => (
-                        <Link key={l.slug} to={l.href} className="block text-sm py-1 pl-2 text-muted-foreground" onClick={() => setIsMenuOpen(false)}>
-                          {l.name}
-                        </Link>
-                      ))}
-                    </div>
-                  ))}
+                {/* Pricing and About links */}
+                <div className="pt-2 border-t border-white/10 flex flex-col gap-2">
+                  <Link to="/pricing" className="block text-base font-bold py-2 px-2 hover:text-primary" onClick={() => setIsMenuOpen(false)}>
+                    Pricing
+                  </Link>
+                  <Link to="/about" className="block text-base font-bold py-2 px-2 hover:text-primary" onClick={() => setIsMenuOpen(false)}>
+                    About
+                  </Link>
                 </div>
-              </div>
-
-              <div className="pt-4 border-t border-white/10">
-                <div className="flex items-center space-x-3 text-muted-foreground mb-3">
-                  <Phone className="w-5 h-5" />
-                  <span className="text-base font-medium">+91 9666736088</span>
-                </div>
-                <Button 
-                  variant="cta" 
-                  size="xl" 
-                  className="btn-modern animate-glow"
-                  onClick={() => setShowConsult(true)}
-                >
-                  Get a Free Quote for Bookkeeping
-                </Button>
-              </div>
-            </nav>
-          </div>
+              </nav>
+            </div>
+          </>
         )}
 
         {/* ConsultForm Modal (opened by any sparkly CTA that sets showConsult) */}

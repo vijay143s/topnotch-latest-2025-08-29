@@ -6,10 +6,10 @@ const OutsourcedBookkeeping = () => {
   const content = serviceContent["outsourced-bookkeeping"];
   
   return (
-    <>
+    <div className="min-h-screen bg-gradient-section pt-20">
       <Header />
       <ServicePageLayout {...content} />
-    </>
+    </div>
   );
 };
 

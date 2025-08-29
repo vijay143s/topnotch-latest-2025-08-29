@@ -1,4 +1,5 @@
 import { Upload, Settings, FileCheck } from "lucide-react";
+import Header from "./Header";
 
 const HowItWorks = () => {
   const steps = [
@@ -23,7 +24,9 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-section">
+    <div>
+      <Header/>
+      <section className="section-padding bg-gradient-section">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16 space-y-4">
           <h2 className="text-gradient">How It Works</h2>
@@ -62,6 +65,9 @@ const HowItWorks = () => {
         </div>
       </div>
     </section>
+    </div>
+  
+    
   );
 };
 

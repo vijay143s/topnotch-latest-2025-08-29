@@ -68,7 +68,7 @@ const ConsultForm = ({ onSuccess }: ConsultFormProps) => {
       <h2 className="text-xl sm:text-2xl font-bold mb-4 text-gradient">Get Your Free Quote</h2>
       <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
         <input 
-          className="w-full border border-border/50 rounded-lg p-3 sm:p-4 bg-background/50 backdrop-blur-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300" 
+          className="w-full border border-border/50 rounded-lg p-3 sm:p-4 bg-background/50 backdrop-blur-sm text-foreground placeholder:text-white/80 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300" 
           placeholder="Full Name" 
           name="name" 
           value={form.name} 
@@ -76,7 +76,7 @@ const ConsultForm = ({ onSuccess }: ConsultFormProps) => {
           required 
         />
         <input 
-          className="w-full border border-border/50 rounded-lg p-3 sm:p-4 bg-background/50 backdrop-blur-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300" 
+          className="w-full border border-border/50 rounded-lg p-3 sm:p-4 bg-background/50 backdrop-blur-sm text-foreground placeholder:text-white/80 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300" 
           placeholder="Email Address" 
           name="email" 
           type="email"
@@ -85,7 +85,7 @@ const ConsultForm = ({ onSuccess }: ConsultFormProps) => {
           required 
         />
         <input 
-          className="w-full border border-border/50 rounded-lg p-3 sm:p-4 bg-background/50 backdrop-blur-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300" 
+          className="w-full border border-border/50 rounded-lg p-3 sm:p-4 bg-background/50 backdrop-blur-sm text-foreground placeholder:text-white/80 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300" 
           placeholder="Phone Number" 
           name="phone" 
           type="tel"
@@ -94,7 +94,7 @@ const ConsultForm = ({ onSuccess }: ConsultFormProps) => {
         />
                 
         <textarea 
-          className="w-full border border-border/50 rounded-lg p-3 sm:p-4 bg-background/50 backdrop-blur-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 min-h-[100px] resize-none" 
+          className="w-full border border-border/50 rounded-lg p-3 sm:p-4 bg-background/50 backdrop-blur-sm text-foreground placeholder:text-white/80 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 min-h-[100px] resize-none"
           placeholder="Tell us about your bookkeeping needs..." 
           name="message" 
           value={form.message} 

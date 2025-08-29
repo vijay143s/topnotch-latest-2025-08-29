@@ -6,10 +6,10 @@ const LawyersBookkeeping = () => {
   const content = serviceContent["lawyers-bookkeeping"];
   
   return (
-    <>
+    <div className="min-h-screen bg-gradient-section pt-20">
       <Header />
       <ServicePageLayout {...content} />
-    </>
+    </div>
   );
 };
 

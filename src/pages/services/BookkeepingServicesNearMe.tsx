@@ -6,10 +6,10 @@ const BookkeepingServicesNearMe = () => {
   const content = serviceContent["bookkeeping-services-near-me"];
   
   return (
-    <>
+    <div className="min-h-screen bg-gradient-section pt-20">
       <Header />
       <ServicePageLayout {...content} />
-    </>
+    </div>
   );
 };
 

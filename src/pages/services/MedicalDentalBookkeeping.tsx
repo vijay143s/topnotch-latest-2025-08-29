@@ -6,10 +6,10 @@ const MedicalDentalBookkeeping = () => {
   const content = serviceContent["medical-dental-bookkeeping"];
   
   return (
-    <>
+    <div className="min-h-screen bg-gradient-section pt-20">
       <Header />
       <ServicePageLayout {...content} />
-    </>
+    </div>
   );
 };
 

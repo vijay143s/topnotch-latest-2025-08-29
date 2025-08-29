@@ -40,48 +40,49 @@ const ServicePageLayout = ({
   return (
     <div className="min-h-screen bg-gradient-section">
       {/* Hero Section */}
-      <section className="pt-24 sm:pt-32 pb-16 sm:pb-20 bg-gradient-hero relative overflow-hidden">
+      <section className="pt-24 sm:pt-32 pb-16 sm:pb-20 relative overflow-hidden bg-gradient-to-br from-[#101624] via-[#1a2336] to-[#18304b]">
+        {/* Glassy overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px] z-0"></div>
         {/* Background decoration */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-accent/30 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
-        
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8 relative z-10">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white animate-fade-in">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white drop-shadow-lg animate-fade-in">
               {title}
             </h1>
-            <p className="text-lg sm:text-xl text-white/90 animate-fade-in">
+            <p className="text-lg sm:text-xl text-white/95 drop-shadow animate-fade-in">
               {subtitle}
             </p>
-            <p className="text-base sm:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed animate-fade-in">
+            <p className="text-base sm:text-lg text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow animate-fade-in">
               {description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
               <Button variant="hero" size="xl" onClick={() => setShowConsult(true)} className="btn-modern">
                 Get a Free Quote for Bookkeeping
               </Button>
-              <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10">
+              <Button variant="outline" size="xl" className="border-white/40 text-white hover:bg-white/10">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Call +91 9666736088
               </Button>
             </div>
-      {/* ConsultForm Modal */}
-      {showConsult && (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-          <div className="glass border border-white/20 rounded-xl shadow-hero max-w-lg w-full p-6 relative animate-scale-in">
-            <button
-              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground text-2xl font-bold transition-colors hover:scale-110"
-              onClick={() => setShowConsult(false)}
-              aria-label="Close"
-            >
-              &times;
-            </button>
-            <ConsultForm onSuccess={() => setShowConsult(false)} />
-          </div>
-        </div>
-      )}
+            {/* ConsultForm Modal */}
+            {showConsult && (
+              <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+                <div className="glass border border-white/20 rounded-xl shadow-hero max-w-lg w-full p-6 relative animate-scale-in">
+                  <button
+                    className="absolute top-4 right-4 text-muted-foreground hover:text-foreground text-2xl font-bold transition-colors hover:scale-110"
+                    onClick={() => setShowConsult(false)}
+                    aria-label="Close"
+                  >
+                    &times;
+                  </button>
+                  <ConsultForm onSuccess={() => setShowConsult(false)} />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -254,18 +255,18 @@ const ServicePageLayout = ({
         </div>
         
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8 relative z-10">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white animate-fade-in">
+          <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8 relative z-10 glass-dark p-8 sm:p-12 rounded-2xl shadow-hero border border-white/10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground animate-fade-in drop-shadow-lg">
               Ready to Get Started?
             </h2>
-            <p className="text-base sm:text-lg text-white/90 animate-fade-in">
+            <p className="text-base sm:text-lg text-accent-foreground animate-fade-in">
               Join thousands of businesses who trust TopNotch Solutions with their bookkeeping.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in mt-2">
               <Button variant="hero" size="xl" onClick={() => setShowConsult(true)} className="btn-modern">
                 Get a Free Quote for Bookkeeping
               </Button>
-              <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10">
+              <Button variant="outline" size="xl" className="border-accent/40 text-accent-foreground hover:bg-accent/10">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Call +91 9666736088
               </Button>

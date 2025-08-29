@@ -7,53 +7,55 @@
 @layer base {
   :root {
     /* Modern Dark Theme Base */
-    --background: 220 13% 9%; /* Deep dark blue-gray */
-    --foreground: 210 40% 98%; /* Pure white text */
+
+    /* New Modern Professional Palette */
+    --background: 220 26% 97%; /* Soft gray-blue background */
+    --foreground: 222 47% 11%; /* Charcoal text */
 
     /* Card colors with glass effect */
-    --card: 220 13% 12%; /* Slightly lighter dark */
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%; /* White card */
+    --card-foreground: 222 47% 11%;
 
     /* Popover colors */
-    --popover: 220 13% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    /* Modern Electric Blue Primary */
-    --primary: 217 91% 60%; /* Electric blue */
-    --primary-foreground: 220 13% 9%;
-    --primary-light: 217 91% 70%;
-    --primary-dark: 217 91% 45%;
+    /* Primary Brand Blue */
+    --primary: 222 74% 36%; /* #21409a deep blue */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 192 94% 60%; /* #2ec4f1 vibrant teal */
+    --primary-dark: 222 74% 26%;
 
-    /* Neon Accent Colors */
-    --accent: 188 91% 55%; /* Cyan accent */
-    --accent-foreground: 220 13% 9%;
+    /* Accent Teal */
+    --accent: 192 94% 60%; /* #2ec4f1 */
+    --accent-foreground: 222 47% 11%;
 
     /* Secondary with subtle glow */
-    --secondary: 220 13% 16%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
 
     /* Muted colors */
     --muted: 220 13% 16%;
     --muted-foreground: 215 20% 65%;
 
-    /* Trust colors - Modern green */
-    --trust: 142 76% 46%;
-    --trust-foreground: 220 13% 9%;
+    /* Trust colors - Fresh green */
+    --trust: 146 63% 45%; /* #22d47b */
+    --trust-foreground: 222 47% 11%;
 
     /* Destructive colors */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
     /* Border and input with glow effect */
-    --border: 220 13% 20%;
-    --input: 220 13% 20%;
-    --ring: 217 91% 60%;
+    --border: 222 74% 36%;
+    --input: 222 74% 36%;
+    --ring: 192 94% 60%;
 
     /* Modern Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 35%), hsl(188 91% 55%), hsl(217 91% 60%));
-    --gradient-section: linear-gradient(180deg, hsl(220 13% 9%), hsl(220 13% 12%));
-    --gradient-card: linear-gradient(145deg, hsl(220 13% 12%), hsl(220 13% 16%));
-    --gradient-glow: linear-gradient(90deg, hsl(217 91% 60%), hsl(188 91% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(222 74% 36%), hsl(192 94% 60%), hsl(220 26% 97%));
+    --gradient-section: linear-gradient(180deg, hsl(220 26% 97%), hsl(210 40% 96%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 96%));
+    --gradient-glow: linear-gradient(90deg, hsl(192 94% 60%), hsl(222 74% 36%));
 
     /* Modern Shadows with glow */
     --shadow-card: 0 8px 32px hsl(217 91% 35% / 0.3), 0 0 0 1px hsl(217 91% 60% / 0.1);
