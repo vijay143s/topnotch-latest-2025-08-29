@@ -61,6 +61,53 @@ const Header = () => {
     { name: "About", href: "/about" },
   ];
 
+  // Import enterprise related pages
+  // If not imported, require: import { enterpriseContent } from "@/data/enterpriseContent";
+  // For this patch, assume available:
+  // Enterprise menu structure as per image
+  const enterpriseMenu = [
+    {
+      heading: "Core Enterprise Services",
+      links: [
+        { name: "Outsourced Accounting", href: "/enterprise/outsourced-accounting" },
+        { name: "Controller & Fractional CFO", href: "/enterprise/controller-cfo" },
+        { name: "Accounts Payable Outsourcing", href: "/enterprise/accounts-payable" },
+        { name: "Accounts Receivable Outsourcing", href: "/enterprise/accounts-receivable" },
+        { name: "Multi-Entity Consolidation", href: "/enterprise/multi-entity-consolidation" },
+        { name: "Revenue Recognition (ASC 606)", href: "/enterprise/revenue-recognition" },
+        { name: "Sales-Tax Compliance", href: "/enterprise/sales-tax-compliance" },
+      ]
+    },
+    {
+      heading: "Industries",
+      links: [
+        { name: "Ecommerce", href: "/enterprise/industry/ecommerce" },
+        { name: "Construction", href: "/enterprise/industry/construction" },
+        { name: "Healthcare", href: "/enterprise/industry/healthcare" },
+        { name: "SaaS", href: "/enterprise/industry/saas" },
+        { name: "Manufacturing", href: "/enterprise/industry/manufacturing" },
+        { name: "Professional Services", href: "/enterprise/industry/professional-services" },
+      ]
+    },
+    {
+      heading: "Proof & Resources",
+      links: [
+        { name: "Enterprise Overview", href: "/enterprise" },
+        { name: "Case Studies", href: "/enterprise/case-studies" },
+        { name: "Security & Data Protection", href: "/enterprise/security" },
+        { name: "Pricing", href: "/enterprise/pricing" },
+        { name: "Guides & Templates", href: "/enterprise/guides" },
+      ]
+    },
+    {
+      heading: "Talk to Enterprise",
+      links: [
+        { name: "Schedule a Consultation", href: "/enterprise/consultation" },
+        { name: "Get an Enterprise Quote", href: "/enterprise/quote" },
+      ]
+    }
+  ];
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-dark border-b border-white/10">
       <div className="container mx-auto px-4">
@@ -80,6 +127,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            {/* Services Dropdown */}
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -112,12 +160,47 @@ const Header = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
+            {/* Enterprise Dropdown */}
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-foreground hover:text-primary font-bold bg-transparent">
+                    Enterprise
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-[min(90vw,900px)] p-6 glass border border-white/20 rounded-lg shadow-hero">
+                      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        {enterpriseMenu.map((section, idx) => (
+                          <div key={section.heading}>
+                            <h4 className="font-semibold text-foreground mb-3 text-lg">{section.heading}</h4>
+                            <ul className="space-y-2">
+                              {section.links.map(link => (
+                                <li key={link.href}>
+                                  <NavigationMenuLink asChild>
+                                    <Link to={link.href} className="block text-base text-muted-foreground hover:text-primary py-1">
+                                      {link.name}
+                                    </Link>
+                                  </NavigationMenuLink>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            {/* Pricing/About links */}
             {menuItems.map((item) => (
               <a key={item.name} href={item.href} className="text-foreground hover:text-primary font-bold">
                 {item.name}
               </a>
             ))}
 
+            {/* Compare Dropdown */}
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>

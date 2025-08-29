@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Pricing from "./pages/Pricing";
+
 // Compare Pages
 import TopNotchSolutionsVsBench from "./pages/compare/topnotchsolutions-vs-bench";
 import TopNotchSolutionsVsXero from "./pages/compare/topnotchsolutions-vs-xero";
@@ -22,7 +23,6 @@ import TopNotchSolutionsVsParo from "./pages/compare/topnotchsolutions-vs-paro";
 import NetSuiteVsQuickBooks from "./pages/compare/netsuite-vs-quickbooks";
 
 // Service Pages
-
 import BookkeepingServices from "./pages/services/BookkeepingServices";
 import MonthlyBookkeeping from "./pages/services/MonthlyBookkeeping";
 import CatchUpBookkeeping from "./pages/services/CatchUpBookkeeping";
@@ -42,6 +42,29 @@ import NonprofitsBookkeeping from "./pages/services/NonprofitsBookkeeping";
 import FranchiseBookkeeping from "./pages/services/FranchiseBookkeeping";
 import ConstructionBookkeeping from "./pages/services/ConstructionBookkeeping";
 import RestaurantsBookkeeping from "./pages/services/RestaurantsBookkeeping";
+
+// Enterprise Pages
+import Enterprise from "./pages/enterprise/enterprise";
+import EnterpriseBookkeepingServices from "./pages/enterprise/bookkeeping-services";
+import MultiLocationBookkeeping from "./pages/enterprise/multi-location-bookkeeping";
+import EnterpriseFinancialReporting from "./pages/enterprise/financial-reporting";
+import WhiteLabelEnterprise from "./pages/enterprise/white-label-solutions";
+import EnterprisePricing from "./pages/enterprise/pricing";
+import AccountsPayable from "./pages/enterprise/accounts-payable";
+import AccountsReceivable from "./pages/enterprise/accounts-receivable";
+import RevenueRecognition from "./pages/enterprise/revenue-recognition";
+import SalesTaxCompliance from "./pages/enterprise/sales-tax-compliance";
+import MultiEntityConsolidation from "./pages/enterprise/multi-entity-consolidation";
+import OutsourcedAccounting from "./pages/enterprise/outsourced-accounting";
+
+// Enterprise Industry Pages
+import IndustrySaaS from "./pages/enterprise/industry/saas";
+import IndustryEcommerce from "./pages/enterprise/industry/ecommerce";
+import IndustryHealthcare from "./pages/enterprise/industry/healthcare";
+import IndustryConstruction from "./pages/enterprise/industry/construction";
+import IndustryManufacturing from "./pages/enterprise/industry/manufacturing";
+import IndustryProfessionalServices from "./pages/enterprise/industry/professional-services";
+
 import NetsuiteFAQ from "./pages/compare/netsuitefaq";
 import Contact from "./pages/Contact";
 import HowItWorks from "./components/HowItWorks";
@@ -58,8 +81,31 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<Contact />} />
-          <Route path= '/netsuitefaq' element={<NetsuiteFAQ />} />
-          {/* Compare  */}
+          <Route path='/netsuitefaq' element={<NetsuiteFAQ />} />
+          
+          {/* Enterprise Routes */}
+          <Route path="/enterprise" element={<Enterprise />} />
+          <Route path="/enterprise/bookkeeping-services" element={<EnterpriseBookkeepingServices />} />
+          <Route path="/enterprise/multi-location-bookkeeping" element={<MultiLocationBookkeeping />} />
+          <Route path="/enterprise/financial-reporting" element={<EnterpriseFinancialReporting />} />
+          <Route path="/enterprise/white-label-solutions" element={<WhiteLabelEnterprise />} />
+          <Route path="/enterprise/pricing" element={<EnterprisePricing />} />
+          <Route path="/enterprise/accounts-payable" element={<AccountsPayable />} />
+          <Route path="/enterprise/accounts-receivable" element={<AccountsReceivable />} />
+          <Route path="/enterprise/revenue-recognition" element={<RevenueRecognition />} />
+          <Route path="/enterprise/sales-tax-compliance" element={<SalesTaxCompliance />} />
+          <Route path="/enterprise/multi-entity-consolidation" element={<MultiEntityConsolidation />} />
+          <Route path="/enterprise/outsourced-accounting" element={<OutsourcedAccounting />} />
+
+          {/* Enterprise Industry Routes */}
+          <Route path="/enterprise/industry/saas" element={<IndustrySaaS />} />
+          <Route path="/enterprise/industry/ecommerce" element={<IndustryEcommerce />} />
+          <Route path="/enterprise/industry/healthcare" element={<IndustryHealthcare />} />
+          <Route path="/enterprise/industry/construction" element={<IndustryConstruction />} />
+          <Route path="/enterprise/industry/manufacturing" element={<IndustryManufacturing />} />
+          <Route path="/enterprise/industry/professional-services" element={<IndustryProfessionalServices />} />
+          
+          {/* Compare Pages */}
           <Route path="/compare/topnotchsolutions-vs-bench" element={<TopNotchSolutionsVsBench />} />
           <Route path="/compare/topnotchsolutions-vs-xero" element={<TopNotchSolutionsVsXero />} />
           <Route path="/compare/topnotchsolutions-vs-quickbooks-live" element={<TopNotchSolutionsVsQuickbooksLive />} />
@@ -75,8 +121,6 @@ const App = () => (
           <Route path="/compare/netsuite-vs-quickbooks" element={<NetSuiteVsQuickBooks />} />
           
           {/* Core Services */} 
-
-          {/* Core Bookkeeping Services */}
           <Route path="/services/bookkeeping-services" element={<BookkeepingServices />} />
           <Route path="/services/monthly-bookkeeping" element={<MonthlyBookkeeping />} />
           <Route path="/services/catch-up-bookkeeping" element={<CatchUpBookkeeping />} />
@@ -101,9 +145,9 @@ const App = () => (
           <Route path="/services/construction-bookkeeping" element={<ConstructionBookkeeping />} />
           <Route path="/services/restaurants-bookkeeping" element={<RestaurantsBookkeeping />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
-
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
