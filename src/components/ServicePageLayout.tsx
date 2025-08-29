@@ -68,21 +68,6 @@ const ServicePageLayout = ({
                 Call +91 9666736088
               </Button>
             </div>
-            {/* ConsultForm Modal */}
-            {showConsult && (
-              <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-                <div className="glass border border-white/20 rounded-xl shadow-hero max-w-lg w-full p-6 relative animate-scale-in">
-                  <button
-                    className="absolute top-4 right-4 text-muted-foreground hover:text-foreground text-2xl font-bold transition-colors hover:scale-110"
-                    onClick={() => setShowConsult(false)}
-                    aria-label="Close"
-                  >
-                    &times;
-                  </button>
-                  <ConsultForm onSuccess={() => setShowConsult(false)} />
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </section>
@@ -271,24 +256,25 @@ const ServicePageLayout = ({
                 Call +91 9666736088
               </Button>
             </div>
-            {/* ConsultForm Modal */}
-            {showConsult && (
-              <div className="fixed inset-10 z-[60] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-                <div className="glass border border-white/20 rounded-xl shadow-hero max-w-lg w-full p-6 relative animate-scale-in">
-                  <button
-                    className="absolute top-4 right-4 text-muted-foreground hover:text-foreground text-2xl font-bold transition-colors hover:scale-110"
-                    onClick={() => setShowConsult(false)}
-                    aria-label="Close"
-                  >
-                    &times;
-                  </button>
-                  <ConsultForm onSuccess={() => setShowConsult(false)} />
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </section>
+
+      {/* Single ConsultForm Modal for all buttons, rendered at the root of the page */}
+      {showConsult && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+          <div className="glass border border-white/20 rounded-xl shadow-hero max-w-lg w-full p-6 relative animate-scale-in">
+            <button
+              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground text-2xl font-bold transition-colors hover:scale-110"
+              onClick={() => setShowConsult(false)}
+              aria-label="Close"
+            >
+              &times;
+            </button>
+            <ConsultForm onSuccess={() => setShowConsult(false)} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
