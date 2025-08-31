@@ -6,6 +6,204 @@ import {
 } from "lucide-react";
 
 export const enterpriseContent = {
+  "accounts-receivable": {
+    title: "Enterprise Accounts Receivable Services",
+    subtitle: "Faster Collections. Stronger Cash Flow.",
+    description: "Transform your accounts receivable operations with AI-powered automation and expert teams. Reduce DSO, improve cash flow, and enhance customer relationships with our comprehensive AR management solution.",
+    features: [
+      {
+        title: "AI-Powered Invoice Processing",
+        description: "Automated invoice generation and delivery with intelligent validation and error detection",
+        icon: FileCheck,
+        iconClass: "w-8 h-8 text-primary",
+        metrics: "70% reduction in invoice errors"
+      },
+      {
+        title: "Smart Collections Management",
+        description: "Proactive follow-ups with AI-driven prioritization and customer communication tracking",
+        icon: TrendingUp,
+        iconClass: "w-8 h-8 text-accent",
+        metrics: "40% improvement in collection rates"
+      },
+      {
+        title: "Real-time AR Analytics",
+        description: "Comprehensive aging analysis, cash flow forecasting, and performance dashboards",
+        icon: BarChart3,
+        iconClass: "w-8 h-8 text-trust",
+        metrics: "15-25% reduction in DSO"
+      },
+      {
+        title: "Dispute Resolution",
+        description: "Streamlined dispute tracking and resolution with automated documentation",
+        icon: Shield,
+        iconClass: "w-8 h-8 text-primary",
+        metrics: "60% faster dispute resolution"
+      }
+    ],
+    benefits: [
+      "AI anomaly detection for early risk identification",
+      "Dedicated India-based team with CPA oversight",
+      "Automated cash application and reconciliation",
+      "Multi-entity AR management support",
+      "Contract-aware dispute resolution system",
+      "Scalable capacity for high invoice volumes",
+      "Real-time customer payment behavior analysis",
+      "Integrated credit risk assessment"
+    ],
+    pricing: {
+      title: "Flexible Enterprise Pricing",
+      description: "Transparent pricing scaled to your AR volume with predictable monthly costs",
+      features: [
+        "Volume-based monthly retainers",
+        "Optional dispute management add-ons",
+        "Customer portal integration available",
+        "CPA oversight included",
+        "No hidden fees or long-term contracts",
+        "Scalable team capacity"
+      ],
+      cta: "Get Custom Quote"
+    },
+    testimonial: {
+      quote: "Since implementing TopNotch's AR services, we've seen our DSO decrease by 20% and our team can focus on strategic initiatives rather than chasing payments.",
+      author: "James L",
+      company: "Enterprise Manufacturing Corp",
+      title: "Controller"
+    },
+    faq: [
+      {
+        question: "How do you handle high-volume invoice processing?",
+        answer: "Our AI-powered system scales automatically to handle peak volumes while maintaining accuracy. The dedicated team adjusts capacity as needed."
+      },
+      {
+        question: "Can you integrate with our existing ERP?",
+        answer: "Yes, we support integration with all major ERP systems and can customize our solution to your specific requirements."
+      },
+      {
+        question: "What security measures are in place?",
+        answer: "We maintain SOC 2 compliance, employ encryption, and follow strict data handling protocols to ensure your financial data remains secure."
+      },
+      {
+        question: "How do you handle international invoicing?",
+        answer: "We support multi-currency invoicing, international payment methods, and country-specific compliance requirements."
+      }
+    ],
+    relatedPages: [
+      {
+        title: "Accounts Payable Services",
+        href: "/enterprise/accounts-payable",
+        description: "Streamline your AP process with intelligent automation"
+      },
+      {
+        title: "Financial Reporting",
+        href: "/enterprise/financial-reporting",
+        description: "Real-time insights and automated reporting solutions"
+      },
+      {
+        title: "Multi-Entity Management",
+        href: "/enterprise/multi-entity-consolidation",
+        description: "Unified AR management across multiple entities"
+      }
+    ]
+  },
+  "controller-cfo": {
+    title: "Enterprise Controller & CFO Services",
+    subtitle: "CFO-Level Insights. Controller-Led Accuracy.",
+    description: "Transform your financial operations with our hybrid controller and CFO solution. Get strategic financial leadership and robust operational oversight without the overhead of full-time executives.",
+    features: [
+      {
+        title: "Strategic Financial Planning",
+        description: "AI-powered forecasting and scenario modeling with expert CFO guidance for strategic decision-making",
+        icon: TrendingUp,
+        iconClass: "w-8 h-8 text-primary",
+        metrics: "30% improved forecast accuracy"
+      },
+      {
+        title: "Board-Ready Reporting",
+        description: "Automated variance analysis and professional board pack preparation with AI-generated narratives",
+        icon: FileSpreadsheet,
+        iconClass: "w-8 h-8 text-accent",
+        metrics: "5-day post-close delivery"
+      },
+      {
+        title: "Controller Oversight",
+        description: "Rigorous transaction review, reconciliation monitoring, and compliance checks by certified controllers",
+        icon: Shield,
+        iconClass: "w-8 h-8 text-trust",
+        metrics: "40% faster close cycle"
+      },
+      {
+        title: "Process Automation",
+        description: "AI-assisted anomaly detection, auto-categorization, and policy compliance verification",
+        icon: Zap,
+        iconClass: "w-8 h-8 text-primary",
+        metrics: "75% reduction in manual work"
+      }
+    ],
+    benefits: [
+      "Cost-effective alternative to full-time CFO/controller",
+      "Scalable financial leadership that grows with you",
+      "AI-powered variance analysis and anomaly detection",
+      "CPA-reviewed outputs for all deliverables",
+      "Comprehensive month-end close oversight",
+      "Strategic fundraising and investor relations support",
+      "Policy and procedure documentation",
+      "Real-time financial insights and KPI tracking"
+    ],
+    pricing: {
+      title: "Flexible Leadership Solutions",
+      description: "Customizable engagement models to match your needs and growth stage",
+      features: [
+        "Scalable monthly retainers",
+        "Controller and/or CFO support options",
+        "Add-on services available (AP/AR, consolidation)",
+        "CPA review included",
+        "No long-term contracts required",
+        "Transparent, predictable pricing"
+      ],
+      cta: "Get Custom Quote"
+    },
+    testimonial: {
+      quote: "Their fractional CFO insights were instrumental in improving our fundraising deck, while the controller team's anomaly detection caught a critical $250k error before it impacted our reports.",
+      author: "Daniel C",
+      company: "TechGrowth Solutions",
+      title: "SaaS Founder"
+    },
+    faq: [
+      {
+        question: "What's the difference between controller and CFO services?",
+        answer: "Controllers focus on operational accuracy, compliance, and reporting, while CFOs provide strategic guidance, forecasting, and board-level insights. Our solution can provide both or focus on your specific needs."
+      },
+      {
+        question: "How do you handle sensitive financial data?",
+        answer: "We maintain strict security protocols, including encryption, access controls, and SOC 2 compliance. All team members sign NDAs and follow documented data handling procedures."
+      },
+      {
+        question: "Can you support fundraising activities?",
+        answer: "Yes, our CFO services include fundraising support, investor deck preparation, financial modeling, and due diligence assistance."
+      },
+      {
+        question: "What's your typical response time?",
+        answer: "We maintain regular business hours coverage with your dedicated team, and urgent matters are addressed within 2-4 hours."
+      }
+    ],
+    relatedPages: [
+      {
+        title: "Outsourced Accounting",
+        href: "/enterprise/outsourced-accounting",
+        description: "Comprehensive accounting solutions for enterprises"
+      },
+      {
+        title: "Financial Reporting",
+        href: "/enterprise/financial-reporting",
+        description: "Advanced reporting and analytics solutions"
+      },
+      {
+        title: "Multi-Entity Management",
+        href: "/enterprise/multi-entity-consolidation",
+        description: "Consolidated financial management across entities"
+      }
+    ]
+  },
   "accounts-payable": {
     title: "Enterprise Accounts Payable Services",
     subtitle: "Transform Your AP Process with Intelligent Automation",

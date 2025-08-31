@@ -15,10 +15,7 @@ export interface CompareData {
     text: string;
     href: string;
   }>;
-  blogPosts?: Array<{
-    text: string;
-    href: string;
-  }>;
+
 }
 
 export const compareContent: { [key: string]: CompareData } = {
@@ -59,17 +56,12 @@ export const compareContent: { [key: string]: CompareData } = {
       }
     ],
     relatedServices: [
-      { text: "Catch-Up Bookkeeping Services", href: "/catch-up-bookkeeping" },
-      { text: "QuickBooks Cleanup Services", href: "/quickbooks-cleanup" },
-      { text: "Monthly Bookkeeping Services", href: "/monthly-bookkeeping" },
-      { text: "White-label Bookkeeping Services", href: "/white-label-bookkeeping" },
-      { text: "Compare Pricing Plans", href: "/compare" }
+      { text: "Catch-Up Bookkeeping Services", href: "/services/catch-up-bookkeeping" },
+      { text: "QuickBooks Cleanup Services", href: "/services/quickbooks-cleanup" },
+      { text: "Monthly Bookkeeping Services", href: "/services/monthly-bookkeeping" },
+      { text: "White-label Bookkeeping Services", href: "/enterprise/white-label-solutions" },
+      { text: "Compare Pricing Plans", href: "/pricing" }
     ],
-    blogPosts: [
-      { text: "The Hidden Costs of QuickBooks Live Bookkeeping", href: "/blog/hidden-costs-of-quickbooks-live-bookkeeping" },
-      { text: "The Cost of Switching Bookkeepers Every Year", href: "/blog/cost-of-switching-bookkeepers-every-year" },
-      { text: "AI vs CPA: Who Should You Trust with Your Books?", href: "/blog/ai-vs-cpa-bookkeeping" }
-    ]
   },
   "pilot": {
     competitor: "Pilot",
@@ -122,17 +114,7 @@ export const compareContent: { [key: string]: CompareData } = {
       },
       {
         text: "White-Label Bookkeeping",
-        href: "/services/white-label-bookkeeping"
-      }
-    ],
-    blogPosts: [
-      {
-        text: "Why Most SMBs Overpay for Bookkeeping Tech They Don't Use",
-        href: "/blog/why-most-smbs-overpay-for-bookkeeping-tech"
-      },
-      {
-        text: "Do You Need a CFO or Just a Great Bookkeeper?",
-        href: "/blog/do-you-need-a-cfo-or-just-a-great-bookkeeper"
+        href: "/enterprise/white-label-solutions"
       }
     ]
   },
@@ -223,20 +205,7 @@ export const compareContent: { [key: string]: CompareData } = {
       href: "/pricing"
     }
   ],
-  blogPosts: [
-    {
-      text: "How to Spot Red Flags in Online Bookkeeping Services",
-      href: "/blog/how-to-spot-red-flags-in-online-bookkeeping-services"
-    },
-    {
-      text: "Why Startups and SMBs Are Switching from Pilot to RemoteBooksOnline",
-      href: "/blog/why-startups-and-smbs-are-switching-from-pilot-to-rbo"
-    },
-    {
-      text: "Outgrowing Free Tools: When It’s Time to Switch Bookkeeping Providers",
-      href: "/blog/outgrowing-free-tools-bookkeeping-switch"
-    }
-  ]
+  
 },
 "merritt_bookkeeping": {
   competitor: "Merritt Bookkeeping",
@@ -277,11 +246,11 @@ export const compareContent: { [key: string]: CompareData } = {
   relatedServices: [
     {
       text: "Catch-Up Bookkeeping Services",
-      href: "/catch-up-bookkeeping"
+      href: "/services/catch-up-bookkeeping"
     },
     {
       text: "Monthly Bookkeeping Services",
-      href: "/monthly-bookkeeping"
+      href: "/services/monthly-bookkeeping"
     },
     {
       text: "Pricing Plans",
@@ -289,23 +258,10 @@ export const compareContent: { [key: string]: CompareData } = {
     },
     {
       text: "White-Label Bookkeeping",
-      href: "/white-label-bookkeeping"
+      href: "/enterprise/white-label-solutions"
     }
   ],
-  blogPosts: [
-    {
-      text: "The Hidden Costs of QuickBooks Live Bookkeeping",
-      href: "/blog/hidden-costs-of-quickbooks-live-bookkeeping"
-    },
-    {
-      text: "The Cost of Switching Bookkeepers Every Year",
-      href: "/blog/cost-of-switching-bookkeepers-every-year"
-    },
-    {
-      text: "AI vs CPA: Who Should You Trust with Your Books?",
-      href: "/blog/ai-vs-cpa-bookkeeping"
-    }
-  ]
+  
 },
 "xero": {
   competitor: "Xero",
@@ -361,20 +317,7 @@ export const compareContent: { [key: string]: CompareData } = {
       href: "/services/white-label-bookkeeping"
     }
   ],
-  blogPosts: [
-    {
-      text: "Why Startups and SMBs Are Switching from Pilot to RemoteBooksOnline",
-      href: "/blog/why-startups-and-smbs-are-switching-from-pilot-to-rbo"
-    },
-    {
-      text: "Outgrowing Free Tools: When It’s Time to Switch Bookkeeping Providers",
-      href: "/blog/outgrowing-free-tools-bookkeeping-switch"
-    },
-    {
-      text: "Check out our post explaining the difference between bookkeeping software and full-service bookkeeping.",
-      href: "https://www.remotebooksonline.com/blog/remotebooksonline-vs-xero"
-    }
-  ]
+  
 },
 "paro": {
   competitor: "Paro",
@@ -426,16 +369,7 @@ export const compareContent: { [key: string]: CompareData } = {
       href: "/pricing"
     }
   ],
-  blogPosts: [
-    {
-      text: "How to Choose Between a Bookkeeping Service and a Freelancer",
-      href: "/blog/bookkeeping-service-vs-freelancer"
-    },
-    {
-      text: "Why CPA Review Matters for Your Business",
-      href: "/blog/why-cpa-review-matters"
-    }
-  ]
+  
 },
 "wave": {
   competitor: "Wave",
@@ -475,35 +409,22 @@ export const compareContent: { [key: string]: CompareData } = {
   relatedServices: [
     {
       text: "Monthly Bookkeeping Services",
-      href: "/monthly-bookkeeping"
+      href: "/services/monthly-bookkeeping"
     },
     {
       text: "Catch-Up Bookkeeping Services",
-      href: "/catch-up-bookkeeping"
+      href: "/services/catch-up-bookkeeping"
     },
     {
       text: "QuickBooks Cleanup",
-      href: "/quickbooks-cleanup"
+      href: "/services/quickbooks-cleanup"
     },
     {
       text: "Pricing Plans",
       href: "/pricing"
     }
   ],
-  blogPosts: [
-    {
-      text: "What CPA-Reviewed Bookkeeping Really Means",
-      href: "/blog/what-cpa-reviewed-bookkeeping-really-means"
-    },
-    {
-      text: "Do You Need a CFO or Just a Great Bookkeeper?",
-      href: "/blog/do-you-need-a-cfo-or-just-a-great-bookkeeper"
-    },
-    {
-      text: "When Basic Bookkeeping Isn’t Enough",
-      href: "/blog/when-basic-bookkeeping-isnt-enough"
-    }
-  ]
+  
 },
 "bookkeeper360": {
   competitor: "Bookkeeper360",
@@ -564,12 +485,7 @@ export const compareContent: { [key: string]: CompareData } = {
       href: "/pricing"
     }
   ],
-  blogPosts: [
-    {
-      text: "See why many small businesses choose TopNotchSolutions when they need bookkeeping — not CFO services",
-      href: "https://www.remotebooksonline.com/blog/remotebooksonline-vs-bookkeeper360"
-    }
-  ]
+  
 },
 "indinero": {
   competitor: "inDinero",
@@ -621,16 +537,7 @@ export const compareContent: { [key: string]: CompareData } = {
       href: "/pricing"
     }
   ],
-  blogPosts: [
-    {
-      text: "How to Choose the Right Bookkeeping Service for Your Business",
-      href: "/blog/how-to-choose-the-right-bookkeeping-service"
-    },
-    {
-      text: "Why CPA Review Matters for Your Business",
-      href: "/blog/why-cpa-review-matters"
-    }
-  ]
+  
 },
 
 "netsuite_vs_quickbooks": {
@@ -673,23 +580,18 @@ export const compareContent: { [key: string]: CompareData } = {
   relatedServices: [
     {
       text: "NetSuite Bookkeeping FAQs",
-      href: "/netsuitefaq"
+      href: "/services/netsuitefaq"
     },
     {
       text: "Monthly Bookkeeping Services",
-      href: "/monthly-bookkeeping"
+      href: "/services/monthly-bookkeeping"
     },
     {
       text: "Catch-Up Bookkeeping Services",
-      href: "/catch-up-bookkeeping"
+      href: "/services/catch-up-bookkeeping"
     }
   ],
-  blogPosts: [
-    {
-      text: "How to Choose the Right Accounting System for Your Business",
-      href: "/blog/how-to-choose-the-right-accounting-system"
-    }
-  ]
+  
 },
 "netsuitefaq": {
   competitor: "NetSuite Bookkeeping FAQ",
@@ -775,12 +677,7 @@ export const compareContent: { [key: string]: CompareData } = {
       href: "/services/catch-up-bookkeeping"
     }
   ],
-  blogPosts: [
-    {
-      text: "How to Choose the Right Bookkeeping Service for NetSuite",
-      href: "/blog/how-to-choose-the-right-bookkeeping-service"
-    }
-  ]
+  
 },
 "quickbooks_live": {
     competitor: "QuickBooks Live",
@@ -819,14 +716,67 @@ export const compareContent: { [key: string]: CompareData } = {
       }
     ],
     relatedServices: [
-      { text: "QuickBooks Cleanup", href: "/quickbooks-cleanup" },
-      { text: "Monthly Bookkeeping Services", href: "/monthly-bookkeeping" },
-      { text: "Catch-Up Bookkeeping", href: "/catch-up-bookkeeping" },
+      { text: "QuickBooks Cleanup", href: "/services/quickbooks-cleanup" },
+      { text: "Monthly Bookkeeping Services", href: "/services/monthly-bookkeeping" },
+      { text: "Catch-Up Bookkeeping", href: "/services/catch-up-bookkeeping" },
       { text: "Pricing Plans", href: "/pricing" }
     ],
-    blogPosts: [
-      { text: "The Hidden Costs of QuickBooks Live Bookkeeping", href: "/blog/hidden-costs-of-quickbooks-live-bookkeeping" },
-      { text: "What CPA-Reviewed Bookkeeping Really Means", href: "/blog/what-cpa-reviewed-bookkeeping-really-means" }
+    
+  },
+  "botkeeper": {
+    competitor: "Botkeeper",
+    title: "TopNotchSolutions vs Botkeeper",
+    subtitle: "Comparing AI-Enhanced vs Human-First Bookkeeping Services",
+    overview: {
+      description: "Botkeeper uses AI and machine learning to automate bookkeeping tasks, with human oversight. TopNotchSolutions provides dedicated, CPA-reviewed bookkeeping with real human expertise at the core. See how they compare for businesses seeking reliable financial reporting.",
+      rows: [
+        ["Core Service", "Human-first, CPA reviewed", "AI-first with human oversight"],
+        ["Starting Price", "$150/month", "$1,000/month"],
+        ["First Month Free", "Yes", "No"],
+        ["CPA Review", "Included standard", "Varies by plan"],
+        ["Catch-Up Services", "Yes, all plans", "Limited availability"],
+        ["Software Support", "QuickBooks & Xero", "QuickBooks focused"],
+        ["White-Label Option", "Yes", "Yes (higher tiers)"],
+        ["Data Entry Method", "Expert human input", "AI automation + review"],
+        ["Support Model", "Dedicated team", "Platform-based + team"],
+        ["Contract Required", "No", "Yes (usually annual)"]
+      ]
+    },
+    keyDifferences: [
+      {
+        title: "Human Expertise vs AI Automation",
+        desc: "TopNotchSolutions relies on experienced bookkeepers and CPAs for accuracy. Botkeeper uses AI for initial processing, which may require more human review and correction."
+      },
+      {
+        title: "Pricing and Accessibility",
+        desc: "Our services start at $150/month with no contract. Botkeeper's AI platform typically starts at $1,000/month with annual commitments."
+      },
+      {
+        title: "Service Model",
+        desc: "We provide dedicated human support and CPA review standard. Botkeeper emphasizes their AI platform with human oversight as needed."
+      },
+      {
+        title: "Implementation and Training",
+        desc: "TopNotchSolutions offers quick onboarding with minimal learning curve. Botkeeper may require more extensive setup and training to use their AI platform effectively."
+      }
+    ],
+    relatedServices: [
+      {
+        text: "Monthly Bookkeeping Services",
+        href: "/services/monthly-bookkeeping"
+      },
+      {
+        text: "Catch-Up Bookkeeping Services",
+        href: "/services/catch-up-bookkeeping"
+      },
+      {
+        text: "White-Label Bookkeeping",
+        href: "/enterprise/white-label-solutions"
+      },
+      {
+        text: "Pricing Overview",
+        href: "/pricing"
+      }
     ]
   }
 };

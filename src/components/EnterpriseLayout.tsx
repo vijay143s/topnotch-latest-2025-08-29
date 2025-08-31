@@ -55,7 +55,7 @@ const EnterpriseLayout = ({
   const [showConsult, setShowConsult] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-section">
+    <div className="min-h-screen bg-gradient-section pt-20">
       <Header />
 
       {/* Enterprise Hero Section */}

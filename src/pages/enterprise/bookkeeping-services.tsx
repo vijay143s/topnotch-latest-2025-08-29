@@ -8,9 +8,7 @@ const EnterpriseBookkeepingServices = () => {
     icon: f.icon ? <f.icon className={f.iconClass} /> : null
   }));
   return (
-    <div className="min-h-screen bg-gradient-section pt-20">
-        <EnterpriseLayout {...content} features={features} />;
-    </div>
+        <EnterpriseLayout {...content} features={features} />
   )
 };
 

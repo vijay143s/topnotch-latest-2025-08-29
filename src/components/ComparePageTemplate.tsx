@@ -110,32 +110,7 @@ const ComparePageTemplate = ({ competitorId }: { competitorId: string }) => {
         </section>
       )}
 
-      {content.blogPosts && (
-        <section className="section-padding relative overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-32 h-32 bg-accent/20 rounded-full blur-2xl animate-float"></div>
-            <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
-          </div>
-          <div className="container mx-auto px-4 max-w-4xl text-center space-y-8 relative z-10">
-            <h2 className="text-2xl font-bold text-gradient">Learn More</h2>
-            <div className="glass neon-border rounded-xl p-6 hover-lift">
-              <div className="flex flex-col items-center gap-4">
-                {content.blogPosts.map((post, index) => (
-                  <a
-                    key={post.href}
-                    href={post.href}
-                    className="text-primary hover:text-primary/80 underline-offset-4 hover:underline animate-fade-in"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    {post.text}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
+
     </CompareLayout>
   );
 };

@@ -7,7 +7,10 @@ const EnterpriseManufacturing = () => {
     ...f,
     icon: f.icon ? <f.icon className={f.iconClass} /> : null
   }));
-  return <EnterpriseLayout {...content} features={features} />;
+  return (
+      <EnterpriseLayout {...content} features={features} />
+
+  );
 };
 
 export default EnterpriseManufacturing;

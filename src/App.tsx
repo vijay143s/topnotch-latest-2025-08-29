@@ -68,6 +68,11 @@ import IndustryProfessionalServices from "./pages/enterprise/industry/profession
 import NetsuiteFAQ from "./pages/compare/netsuitefaq";
 import Contact from "./pages/Contact";
 import HowItWorks from "./components/HowItWorks";
+import EnterpriseCfo from "./pages/enterprise/cfo";
+import EnterpriseConsultation from "./pages/enterprise/consultation";
+import Security from "./pages/enterprise/security";
+import CaseStudies from "./pages/enterprise/case-studies";
+import Support from "./pages/enterprise/support";
 
 const queryClient = new QueryClient();
 
@@ -96,7 +101,11 @@ const App = () => (
           <Route path="/enterprise/sales-tax-compliance" element={<SalesTaxCompliance />} />
           <Route path="/enterprise/multi-entity-consolidation" element={<MultiEntityConsolidation />} />
           <Route path="/enterprise/outsourced-accounting" element={<OutsourcedAccounting />} />
-
+          <Route path="/enterprise/controller-cfo" element={<EnterpriseCfo />} />
+          <Route path="/enterprise/consultation" element={<EnterpriseConsultation />} />
+          <Route path="/enterprise/security" element={<Security />} />
+          <Route path="/enterprise/case-studies" element={<CaseStudies />} />
+          <Route path="/enterprise/support" element={<Support />} />
           {/* Enterprise Industry Routes */}
           <Route path="/enterprise/industry/saas" element={<IndustrySaaS />} />
           <Route path="/enterprise/industry/ecommerce" element={<IndustryEcommerce />} />

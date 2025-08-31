@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ConsultForm from "@/components/ConsultForm";
-import { Card, CardContent } from "@/components/ui/card";
+import GlassCard from "@/components/ui/glass-card";
 import { Check, Phone, Shield, Clock, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 
 interface ServicePageLayoutProps {
   title: string;
@@ -275,6 +276,7 @@ const ServicePageLayout = ({
           </div>
         </div>
       )}
+      <Footer />
     </div>
   );
 };
