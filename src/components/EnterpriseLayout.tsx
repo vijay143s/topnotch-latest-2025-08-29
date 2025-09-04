@@ -53,36 +53,51 @@ const EnterpriseLayout = ({
   relatedPages
 }: EnterpriseLayoutProps) => {
   const [showConsult, setShowConsult] = useState(false);
+  const [showCopySuccess, setShowCopySuccess] = useState(false);
+
+  const handleCopyNumber = () => {
+    navigator.clipboard.writeText('+19726666214').then(() => {
+      setShowCopySuccess(true);
+      setTimeout(() => setShowCopySuccess(false), 2000);
+    });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-section pt-20">
       <Header />
+      
+      {showCopySuccess && (
+        <div className="fixed top-8 left-1/2 transform -translate-x-1/2 z-[100] bg-gradient-to-r from-trust to-trust/80 text-white px-6 py-3 rounded-lg shadow-glow text-base font-semibold animate-fade-in">
+          Phone number copied to clipboard!
+        </div>
+      )}
 
       {/* Enterprise Hero Section */}
-      <section className="pt-24 sm:pt-32 pb-16 sm:pb-20 relative overflow-hidden bg-gradient-to-br from-[#0f1419] via-[#1a2336] to-[#2c1810]">
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px] z-0"></div>
+      <section className="pt-24 sm:pt-32 pb-16 sm:pb-20 relative overflow-hidden bg-gradient-to-br from-[#101624] via-[#1a2336] to-[#18304b]">
+        {/* Glassy overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px] z-0"></div>
+        {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-trust/10 rounded-full blur-2xl"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-accent/30 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto text-center space-y-6 sm:space-y-8">
+          <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
             <div className="inline-flex items-center space-x-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 text-accent text-sm font-medium animate-fade-in">
               <Building2 className="w-4 h-4" />
               <span>Enterprise Solutions</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-lg animate-fade-in leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white drop-shadow-lg animate-fade-in">
               {title}
             </h1>
             
-            <p className="text-xl sm:text-2xl text-white/95 drop-shadow animate-fade-in max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/95 drop-shadow animate-fade-in">
               {subtitle}
             </p>
             
-            <p className="text-base sm:text-lg text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow animate-fade-in">
+            <p className="text-base sm:text-lg text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow animate-fade-in">
               {description}
             </p>
             
@@ -91,25 +106,30 @@ const EnterpriseLayout = ({
                 Get Enterprise Quote
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button variant="outline" size="xl" className="border-white/40 text-white hover:bg-white/10 text-lg">
+              <Button 
+                variant="outline" 
+                size="xl" 
+                className="border-white/40 text-white hover:bg-white/10 text-lg"
+                onClick={handleCopyNumber}
+              >
                 <Phone className="w-5 h-5 mr-2" />
                 Schedule Demo
               </Button>
             </div>
 
             {/* Enterprise Trust Indicators */}
-            <div className="flex flex-wrap items-center justify-center gap-6 pt-8">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-6 sm:pt-8">
               <div className="flex items-center space-x-2 text-white/80">
-                <Users className="w-5 h-5 text-accent" />
-                <span className="text-sm font-medium">500+ Enterprise Clients</span>
+                <Users className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+                <span className="text-xs sm:text-sm font-medium">500+ Enterprise Clients</span>
               </div>
               <div className="flex items-center space-x-2 text-white/80">
-                <Shield className="w-5 h-5 text-trust" />
-                <span className="text-sm font-medium">SOX Compliance Ready</span>
+                <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-trust" />
+                <span className="text-xs sm:text-sm font-medium">SOX Compliance Ready</span>
               </div>
               <div className="flex items-center space-x-2 text-white/80">
-                <Zap className="w-5 h-5 text-accent" />
-                <span className="text-sm font-medium">99.9% SLA Uptime</span>
+                <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+                <span className="text-xs sm:text-sm font-medium">99.9% SLA Uptime</span>
               </div>
             </div>
           </div>
@@ -334,9 +354,14 @@ const EnterpriseLayout = ({
                 Get Enterprise Quote
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button variant="outline" size="xl" className="border-white/40 text-white hover:bg-white/10 text-lg">
+              <Button 
+                variant="outline" 
+                size="xl" 
+                className="border-white/40 text-white hover:bg-white/10 text-lg"
+                onClick={handleCopyNumber}
+              >
                 <Phone className="w-5 h-5 mr-2" />
-                Schedule Demo Call
+                Schedule Demo
               </Button>
             </div>
             <div className="text-sm text-white/70 animate-fade-in pt-4">

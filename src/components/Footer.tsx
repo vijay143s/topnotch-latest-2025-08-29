@@ -53,15 +53,16 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2">
                 <span className="text-accent mt-1">📍</span>
-                <span className="hover:text-accent transition-colors">India Location: TopNotch Solutions, 506 Manjeera Majestic Commercial, Hyderabad, Telangana 500072</span>
+                <span className="hover:text-accent transition-colors">US Location: 941 W Morse Blvd, Suite#100 Winter Park, FL 32789</span>
               </li>
               <li className="flex items-start space-x-2">
                 <span className="text-accent mt-1">📍</span>
-                <span className="hover:text-accent transition-colors">US Location: 941 W Morse Blvd, Suite#100 Winter Park, FL 32789</span>
+                <span className="hover:text-accent transition-colors">India Location: TopNotch Solutions, 506 Manjeera Majestic Commercial, Hyderabad, Telangana 500072, Mob +91 9666736088</span>
               </li>
+              
               <li className="flex items-center space-x-2">
                 <span className="text-accent">📞</span>
-                <a href="tel:+919666736088" className="hover:text-accent transition-colors hover:underline">+91 9666736088</a>
+                <a href="tel:+919666736088" className="hover:text-accent transition-colors hover:underline">+1 972-666-6214</a>
               </li>
               <li className="flex items-center space-x-2">
                 <span className="text-accent">✉️</span>

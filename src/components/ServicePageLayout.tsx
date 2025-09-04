@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ConsultForm from "@/components/ConsultForm";
-import GlassCard from "@/components/ui/glass-card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Check, Phone, Shield, Clock, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
@@ -38,6 +38,14 @@ const ServicePageLayout = ({
   faq
 }: ServicePageLayoutProps) => {
   const [showConsult, setShowConsult] = useState(false);
+  const [showCopySuccess, setShowCopySuccess] = useState(false);
+
+  const handleCopyNumber = (number: string) => {
+    navigator.clipboard.writeText(number).then(() => {
+      setShowCopySuccess(true);
+      setTimeout(() => setShowCopySuccess(false), 2000);
+    });
+  };
   return (
     <div className="min-h-screen bg-gradient-section">
       {/* Hero Section */}
@@ -64,9 +72,14 @@ const ServicePageLayout = ({
               <Button variant="hero" size="xl" onClick={() => setShowConsult(true)} className="btn-modern">
                 Get a Free Quote for Bookkeeping
               </Button>
-              <Button variant="outline" size="xl" className="border-white/40 text-white hover:bg-white/10">
+              <Button 
+                variant="outline" 
+                size="xl" 
+                className="border-white/40 text-white hover:bg-white/10"
+                onClick={() => handleCopyNumber('+19726666214')}
+              >
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Call +91 9666736088
+                Schedule Demo
               </Button>
             </div>
           </div>
@@ -252,9 +265,14 @@ const ServicePageLayout = ({
               <Button variant="hero" size="xl" onClick={() => setShowConsult(true)} className="btn-modern">
                 Get a Free Quote for Bookkeeping
               </Button>
-              <Button variant="outline" size="xl" className="border-accent/40 text-accent-foreground hover:bg-accent/10">
+              <Button 
+                variant="outline" 
+                size="xl" 
+                className="border-accent/40 text-accent-foreground hover:bg-accent/10"
+                onClick={() => handleCopyNumber('+19726666214')}
+              >
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Call +91 9666736088
+                Schedule Demo
               </Button>
             </div>
           </div>
@@ -277,6 +295,13 @@ const ServicePageLayout = ({
         </div>
       )}
       <Footer />
+
+      {/* Copy Success Popup */}
+      {showCopySuccess && (
+        <div className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-trust to-trust/80 text-white px-6 py-3 rounded-lg shadow-glow text-base font-semibold animate-fade-in">
+          Phone number copied to clipboard!
+        </div>
+      )}
     </div>
   );
 };

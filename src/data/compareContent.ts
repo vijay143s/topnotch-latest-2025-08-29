@@ -70,7 +70,7 @@ export const compareContent: { [key: string]: CompareData } = {
     overview: {
       description: "Pilot and TopNotchSolutions both offer outsourced bookkeeping services — but they serve very different customers. If you're a small business looking for accurate, CPA-reviewed bookkeeping without paying a startup premium, this comparison is for you.",
       rows: [
-        ["Starting Price", "$150/month", "$599/month and up"],
+        ["Starting Price", "$125/month", "$599/month and up"],
         ["CPA Review Included", "Yes", "Only on CFO+ plans"],
         ["First Month Free", "Yes", "No"],
         ["Catch-Up Services", "Yes", "Offered, but high cost"],
@@ -125,7 +125,7 @@ export const compareContent: { [key: string]: CompareData } = {
     overview: {
       description: "Both TopNotchSolutions and Bench offer online bookkeeping services, but with key differences in pricing, features, and support. See how we compare.",
       rows: [
-        ["Starting Price", "$150/month", "$249/month"],
+        ["Starting Price", "$125/month", "$249/month"],
         ["Software Included", "Yes (QB/Xero)", "Proprietary only"],
         ["First Month Free", "Yes", "No"],
         ["Export to QuickBooks", "Native Support", "Manual CSV only"],
@@ -180,7 +180,7 @@ export const compareContent: { [key: string]: CompareData } = {
     },
     {
       title: "Flat Monthly Pricing — No Contracts",
-      desc: "Our plans start at just $150/month with no hourly rates, surprise fees, or long-term commitments. 1-800Accountant pricing can vary based on bundled services."
+      desc: "Our plans start at just $125/month with no hourly rates, surprise fees, or long-term commitments. 1-800Accountant pricing can vary based on bundled services."
     },
     {
       title: "CPA Review Every Month",
@@ -212,9 +212,9 @@ export const compareContent: { [key: string]: CompareData } = {
   title: "TopNotchSolutions vs Merritt Bookkeeping",
   subtitle: "Comparing Online Bookkeeping Services",
   overview: {
-    description: "Merritt Bookkeeping is known for its simplicity and affordability, offering a $190/month flat-rate plan. But that simplicity comes with trade-offs - no CPA review, no catch-up bookkeeping, and limited customization. TopNotchSolutions offers a full-service, CPA-reviewed experience - still at an affordable monthly price, starting at just $150/month.",
+    description: "Merritt Bookkeeping is known for its simplicity and affordability, offering a $190/month flat-rate plan. But that simplicity comes with trade-offs - no CPA review, no catch-up bookkeeping, and limited customization. TopNotchSolutions offers a full-service, CPA-reviewed experience - still at an affordable monthly price, starting at just $125/month.",
     rows: [
-      ["Starting Price", "$150/month", "$190/month"],
+      ["Starting Price", "$125/month", "$190/month"],
       ["CPA Review Included", "Yes", "No"],
       ["Supports QuickBooks & Xero", "Yes", "QuickBooks Desktop only"],
       ["Catch-Up Services", "Yes", "No"],
@@ -270,7 +270,7 @@ export const compareContent: { [key: string]: CompareData } = {
   overview: {
     description: "TopNotchSolutions and Xero are often mentioned together — but they’re not direct competitors. Xero is accounting software. TopNotchSolutions is a bookkeeping service that can work inside Xero. Still, people searching for alternatives or evaluating platforms ask: “Which should I use?”",
     rows: [
-      ["Starting Price", "$150/month", "Starts at $13/month (software only)"],
+      ["Starting Price", "$125/month", "Starts at $13/month (software only)"],
       ["CPA Review Included", "Yes", "No"],
       ["First Month Free", "Yes", "No"],
       ["Catch-Up Services", "Yes", "No"],
@@ -326,7 +326,7 @@ export const compareContent: { [key: string]: CompareData } = {
   overview: {
     description: "Paro is a marketplace that matches businesses with freelance bookkeepers and accountants. TopNotchSolutions provides a dedicated, in-house team with CPA oversight, flat-rate pricing, and a focus on long-term relationships and reliability.",
     rows: [
-      ["Starting Price", "$150/month", "Varies (hourly/freelancer rates)"],
+      ["Starting Price", "$125/month", "Varies (hourly/freelancer rates)"],
       ["CPA Review Included", "Yes", "Optional, extra cost"],
       ["First Month Free", "Yes", "No"],
       ["Bookkeeper Consistency", "Dedicated team", "Freelancer may change"],
@@ -379,7 +379,7 @@ export const compareContent: { [key: string]: CompareData } = {
     description: "Wave is free accounting software for small businesses. TopNotchSolutions is a full-service, CPA-reviewed bookkeeping solution. They serve different needs — but many business owners compare them when deciding how to manage their books. If you’re choosing between doing it yourself with Wave or outsourcing your books to a team of professionals, here’s what you should know.",
     rows: [
       ["What It Is", "Bookkeeping Service", "DIY Software"],
-      ["Starting Price", "$150/month", "Free"],
+      ["Starting Price", "$125/month", "Free"],
       ["Includes Bookkeeper", "Yes", "No"],
       ["CPA Review Included", "Yes", "No"],
       ["Catch-Up Services", "Yes", "No"],
@@ -438,7 +438,7 @@ export const compareContent: { [key: string]: CompareData } = {
       ["Tax Filing Support", "Tax-ready books only", "Available with premium packages"],
       ["White-Label for CPAs", "Yes", "No"],
       ["Industry Flexibility", "Broad — all SMBs", "Focused on tech, ecommerce, SaaS, startups"],
-      ["Starting Price", "$150/month", "Starts at $399/month"],
+      ["Starting Price", "$125/month", "Starts at $399/month"],
       ["CPA Review Included", "Yes", "No (add-on only)"],
       ["First Month Free", "Yes", "No"],
       ["Custom Dashboard", "No", "Yes"],
@@ -494,7 +494,7 @@ export const compareContent: { [key: string]: CompareData } = {
   overview: {
     description: "inDinero is a premium accounting and bookkeeping provider focused on startups and growing businesses, offering bundled tax, CFO, and advisory services. TopNotchSolutions delivers flat-rate, CPA-reviewed bookkeeping for SMBs, with a focus on affordability, transparency, and long-term support.",
     rows: [
-      ["Starting Price", "$150/month", "Starts at $300/month"],
+      ["Starting Price", "$125/month", "Starts at $300/month"],
       ["CPA Review Included", "Yes", "No (add-on only)"],
       ["First Month Free", "Yes", "No"],
       ["Catch-Up Services", "Yes", "Yes (custom-quoted)"],
@@ -686,7 +686,7 @@ export const compareContent: { [key: string]: CompareData } = {
     overview: {
       description: "QuickBooks Live is Intuit’s own bookkeeping add-on for QuickBooks Online users. TopNotchSolutions is a full-service, CPA-reviewed bookkeeping provider that works with QuickBooks, Xero, and more. See how the two compare for small business owners who want more than just data entry.",
       rows: [
-        ["Starting Price", "$150/month", "$200/month and up"],
+        ["Starting Price", "$125/month", "$200/month and up"],
         ["Software Included", "Works in your QBO/Xero", "QuickBooks Online only"],
         ["CPA Review Included", "Yes", "No (bookkeeper only)"],
         ["First Month Free", "Yes", "No"],
@@ -731,7 +731,7 @@ export const compareContent: { [key: string]: CompareData } = {
       description: "Botkeeper uses AI and machine learning to automate bookkeeping tasks, with human oversight. TopNotchSolutions provides dedicated, CPA-reviewed bookkeeping with real human expertise at the core. See how they compare for businesses seeking reliable financial reporting.",
       rows: [
         ["Core Service", "Human-first, CPA reviewed", "AI-first with human oversight"],
-        ["Starting Price", "$150/month", "$1,000/month"],
+        ["Starting Price", "$125/month", "$1,000/month"],
         ["First Month Free", "Yes", "No"],
         ["CPA Review", "Included standard", "Varies by plan"],
         ["Catch-Up Services", "Yes, all plans", "Limited availability"],
@@ -749,7 +749,7 @@ export const compareContent: { [key: string]: CompareData } = {
       },
       {
         title: "Pricing and Accessibility",
-        desc: "Our services start at $150/month with no contract. Botkeeper's AI platform typically starts at $1,000/month with annual commitments."
+        desc: "Our services start at $125/month with no contract. Botkeeper's AI platform typically starts at $1,000/month with annual commitments."
       },
       {
         title: "Service Model",

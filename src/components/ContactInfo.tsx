@@ -15,16 +15,17 @@ const ContactInfo = () => {
               <MapPin size={20} className="sm:w-6 sm:h-6" />
             </div>
             <div className="space-y-3">
+              
               <div>
-                <h4 className="text-base sm:text-lg font-semibold text-foreground">India Location</h4>
-                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                  TopNotch Solutions, 506 Manjeera Majestic Commercial, Hyderabad, Telangana 500072
+                <h4 className="text-base sm:text-lg font-semibold text-foreground">US Location</h4>
+                <p className="text-white text-sm sm:text-base leading-relaxed">
+                  941 W Morse Blvd, Suite#100 Winter Park, FL 32789
                 </p>
               </div>
               <div>
-                <h4 className="text-base sm:text-lg font-semibold text-foreground">US Location</h4>
-                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                  941 W Morse Blvd, Suite#100 Winter Park, FL 32789
+                <h4 className="text-base sm:text-lg font-semibold text-foreground">India Location</h4>
+                <p className="text-white text-sm sm:text-base leading-relaxed">
+                  TopNotch Solutions, 506 Manjeera Majestic Commercial, Hyderabad, Telangana 500072
                 </p>
               </div>
             </div>
@@ -37,9 +38,9 @@ const ContactInfo = () => {
           </div>
           <div>
             <h4 className="text-base sm:text-lg font-semibold text-foreground">Phone Number</h4>
-            <p className="text-muted-foreground text-sm sm:text-base mt-1">
+            <p className="text-white text-sm sm:text-base mt-1">
               <a href="tel:+919666736088" className="hover:text-primary transition-colors hover:underline">
-                +91 9666736088
+                +1 972-666-6214
               </a>
             </p>
           </div>
@@ -51,7 +52,7 @@ const ContactInfo = () => {
           </div>
           <div>
             <h4 className="text-base sm:text-lg font-semibold text-foreground">Email Address</h4>
-            <p className="text-muted-foreground text-sm sm:text-base mt-1">
+            <p className="text-white text-sm sm:text-base mt-1">
               <a href="mailto:info@topnotchsol.com" className="hover:text-primary transition-colors hover:underline">
                 info@topnotchsol.com
               </a>
@@ -66,7 +67,7 @@ const ContactInfo = () => {
           </div>
           <div>
             <h4 className="text-base sm:text-lg font-semibold text-foreground">Business Hours</h4>
-            <div className="text-muted-foreground text-sm sm:text-base mt-1 space-y-1">
+            <div className="text-white text-sm sm:text-base mt-1 space-y-1">
               <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
               <p>Saturday: 10:00 AM - 4:00 PM</p>
               <p>Sunday: Closed</p>
@@ -80,7 +81,7 @@ const ContactInfo = () => {
             <div className="w-2 h-2 bg-trust rounded-full animate-pulse"></div>
             <span className="text-sm font-semibold">Quick Response Guarantee</span>
           </div>
-          <p className="text-muted-foreground text-xs sm:text-sm">
+          <p className="text-white text-xs sm:text-sm">
             We typically respond to all inquiries within 2 hours during business hours.
           </p>
         </div>
